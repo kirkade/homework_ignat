@@ -29,11 +29,15 @@
     position: absolute;
     width: 120px;
     transition: 0.2s ease-in;
+    background: #06c;
+    color: white;
 }
 
 .button:hover {
     transform: scale(1.05);
+    background: white;
+    color: #06c;
 }
 .button:active {
-    background-color: #06c ;
+
 }
