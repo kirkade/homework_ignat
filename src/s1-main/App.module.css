@@ -14,3 +14,7 @@
     font-size: 22px;
     line-height: 27px;
 }
+
+body {
+    padding-bottom: 300px;
+}
