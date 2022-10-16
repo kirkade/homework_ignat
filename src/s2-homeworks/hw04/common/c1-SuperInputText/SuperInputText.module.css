@@ -1,6 +1,7 @@
 
 
 .input:focus {
+
 }
 
 .input {
@@ -23,6 +24,8 @@
 }
 
 .errorInput:focus {
+    border: 1px solid #CC1439;
+    border-radius: 5px;
 }
 
 .error {
