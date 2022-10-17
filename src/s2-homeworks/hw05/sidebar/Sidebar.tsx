@@ -34,7 +34,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         className={({isActive}) => isActive ? s.active : s.item}
                         // className={...} // делает студент
                     >
-                        Pre-junior
+                        Pre Junior
                     </NavLink>
                     <NavLink
                         id={'hw5-junior-link'}
