@@ -46,10 +46,11 @@
     color: #58ACFF;
 }
 
-.nav a.active {
+.nav .active {
     text-decoration-line: underline;
     color: #0059B2;
 }
+
 .close {
     position: absolute;
     top: 0;
