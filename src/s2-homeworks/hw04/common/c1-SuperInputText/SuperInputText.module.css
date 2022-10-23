@@ -5,11 +5,13 @@
 }
 
 .input {
-    margin-left: 50px;
-    width: 372px;
+    margin-left: 75px;
+    margin-bottom: 21px;
+    width: 276px;
     height: 36px;
     border: 1px solid #D1D1D1;
     border-radius: 5px;
+    outline: none;
 }
 
 .inputWrapper {

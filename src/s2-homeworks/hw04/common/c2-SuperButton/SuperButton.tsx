@@ -22,6 +22,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
         + (disabled ? ' ' + s.disabled : ' ' + '')
         + (xType === 'secondary' ? ' ' + s.secondary : '')
         + (restProps.children === 'default' ? ' ' + s.default : '')// задачка на смешивание классов
+        + (restProps.children === 'Save to ls' ? ' ' + s.default : '')// задачка на смешивание классов
 
     return (
         <button
