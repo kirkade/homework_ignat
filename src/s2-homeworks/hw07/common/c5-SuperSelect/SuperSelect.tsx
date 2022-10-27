@@ -20,6 +20,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
     className,
     onChange,
     onChangeOption,
+    value,
     ...restProps
 }) => {
     const mappedOptions: any[] = options
@@ -29,6 +30,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
                   className={s.option}
                   key={o.id}
                   value={o.id}
+                  selected={o.id === value}
               >
                   {o.value}
               </option>
@@ -37,6 +39,8 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
 
     const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
         // делают студенты
+        onChangeOption?.(+e.currentTarget.value)
+
     }
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')
