@@ -4,6 +4,8 @@ import s from './HW8.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import User from './User'
+import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow,} from "@mui/material";
+import Paper from '@material-ui/core/Paper'
 
 /*
 * 1 - дописать типы и логику (сортировка по имени, фильтрация по совершеннолетию) homeWorkReducer, проверить тестом
@@ -82,16 +84,30 @@ const HW8 = () => {
                         </SuperButton>
                     </div>
 
-                    <table id={'hw8-users'} className={s.users}>
-                        <thead className={s.thead}>
-                        <tr>
-                            <td className={s.nameCol}>Name</td>
-                            <td className={s.ageCol}>Age</td>
-                        </tr>
-                        </thead>
+                    <TableContainer component={Paper} style={{maxWidth:'540px',margin:'20px'}}>
+                        <Table  aria-label="simple table">
+                            <TableHead style={{backgroundColor:'#E5E5E5'}}>
+                                <TableRow>
+                                    <TableCell>Name</TableCell>
+                                    <TableCell>Age</TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {finalPeople}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
 
-                        <tbody>{finalPeople}</tbody>
-                    </table>
+                    {/*<table id={'hw8-users'} className={s.users}>*/}
+                    {/*    <thead className={s.thead}>*/}
+                    {/*    <tr>*/}
+                    {/*        <td className={s.nameCol}>Name</td>*/}
+                    {/*        <td className={s.ageCol}>Age</td>*/}
+                    {/*    </tr>*/}
+                    {/*    </thead>*/}
+
+                    {/*    <tbody>{finalPeople}</tbody>*/}
+                    {/*</table>*/}
                 </div>
             </div>
         </div>
