@@ -17,10 +17,15 @@ const HW10 = () => {
     // useSelector, useDispatch // пишет студент
     const isLoading = false
 
+    const dispatch = useDispatch()
+
     const setLoading = () => { // пишет студент // показать крутилку на 1,5 секунд
         // dispatch
-
+            dispatch(loadingAC(true))
         // setTimeout
+        setTimeout(()=>{
+            loadingAC(false)
+        },1500)
     }
 
     return (
