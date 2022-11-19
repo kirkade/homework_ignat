@@ -1,8 +1,8 @@
-const initState = {
+const initState:StateType = {
     isLoading: false,
 }
 
-type StateType = {
+export type StateType = {
     isLoading: boolean
 }
 
@@ -10,7 +10,8 @@ export const loadingReducer = (state = initState, action: LoadingActionType): St
     switch (action.type) {
         // пишет студент  // need to fix
         case "CHANGE_LOADING":
-        return {...state,isLoading: action.isLoading}
+
+            return {...state, isLoading:action.isLoading}
 
         default:
             return state
