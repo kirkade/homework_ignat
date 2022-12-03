@@ -37,17 +37,21 @@ const HW12 = () => {
             <div id={'hw12-text'} className={s2.hwTitle}>
                 Homework #12
             </div>
+            <div className={themeId===3 ? s.dark : s.select}>
+                <div style={{marginLeft:'30px',fontSize:'14px'}}>Выберите тему</div>
+                <div className={s2.hw}>
 
-            <div className={s2.hw}>
-                <SuperSelect
-                    id={'hw12-select-theme'}
-                    className={s.select}
-                    // сделать переключение тем
-                    options={themes}
-                    value={themeId}
-                    onChangeOption={change}
-                />
+                    <SuperSelect
+                        id={'hw12-select-theme'}
+                        className={themeId===3 ? s.dark : s.select}
+                        // сделать переключение тем
+                        options={themes}
+                        value={themeId}
+                        onChangeOption={change}
+                    />
+                </div>
             </div>
+
         </div>
     )
 }

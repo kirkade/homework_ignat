@@ -20,4 +20,15 @@ html {
 
 .select {
     background-color: transparent;
+    margin-top: 6px;
+    font-size: 14px;
+
+}
+
+.dark {
+    background-color: transparent;
+    margin-top: 6px;
+    font-size: 14px;
+    color:white;
+
 }
