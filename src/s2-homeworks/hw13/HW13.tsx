@@ -47,21 +47,18 @@ const HW13 = () => {
                 if (e.response.status === 500) {
                     setCode('Код 500!')
                     setImage(error500)
-                    setInfo('')
-                    setText('эмитация ошибки на сервере\n' +
-                        'ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
+                    setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
+                    setText('эмитация ошибки на сервере')
                 } else if (e.response.status === 400) {
                     setCode('Код 400!')
                     setImage(error400)
-                    setInfo('')
-                    setText('Ты не отправил success в body вообще!\n' +
-                        'ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                    setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                    setText('Ты не отправил success в body вообще!')
                 } else {
                     setCode('Error!')
                     setImage(errorUnknown)
-                    setInfo('')
-                    setText('Network Error\n' +
-                        'AxiosError')
+                    setInfo('Network Error')
+                    setText('AxiosError')
                 }
 
             })
