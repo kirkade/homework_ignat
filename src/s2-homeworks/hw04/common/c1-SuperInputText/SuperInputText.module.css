@@ -1,6 +1,7 @@
 
 
 .input:focus {
+    border: #0066CC 1px solid;
 
 }
 
@@ -12,6 +13,9 @@
     border: 1px solid #D1D1D1;
     border-radius: 5px;
     outline: none;
+    padding-left: 12px;
+    padding-top: 7px;
+    padding-bottom: 8px;
 }
 
 .inputWrapper {
