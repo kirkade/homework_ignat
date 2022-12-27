@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react'
+import React, {ChangeEvent, useEffect, useState} from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
 import {Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
@@ -17,24 +17,28 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
     }
 ) => {
     const lastPage = Math.ceil(totalCount/itemsCountForPage) // пишет студент // вычислить количество страниц
-    const [pageSize, setPageSize] = useState<number>(itemsCountForPage)
+    const [itemsCount, setItemsCount] = useState<number>(itemsCountForPage)
+
+    useEffect(() => {
+        onChange(page, itemsCount)
+    }, [itemsCount])
 
     const onChangeCallback = (event: any, page: number) => {
         // пишет студент
-
-        onChange(page,pageSize)
+        onChange(page,itemsCount)
     }
 
     const onChangeSelect = (event: ChangeEvent<HTMLSelectElement>) => {
         // пишет студент
 
-        setPageSize(+event.currentTarget.value)
+        setItemsCount(+event.currentTarget.value)
     }
 
     return (
         <div className={s.pagination}>
             <Pagination
                 id={id + '-pagination'}
+                shape='rounded'
                 sx={{
                     // стили для Pagination // пишет студент
                 }}
