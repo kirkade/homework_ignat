@@ -65,8 +65,6 @@ const HW15 = () => {
         setPage(newPage)
         setCount(newCount)
 
-        const params = Object.fromEntries(searchParams)
-        sendQuery(params)
 
         setSearchParams({page: newPage.toString(), count: newCount.toString(), sort})
         //
@@ -77,12 +75,15 @@ const HW15 = () => {
         setSort(newSort)
         setPage(1)
 
-        const params = Object.fromEntries(searchParams)
-        sendQuery(params)
 
         setSearchParams({page: page.toString(), count: count.toString(), sort: newSort})
         //
     }
+
+    useEffect(() => {
+        const params = Object.fromEntries(searchParams)
+        sendQuery(params)
+    }, [searchParams])
 
 
     useEffect(() => {
@@ -135,7 +136,6 @@ const HW15 = () => {
                             {mappedTechs}
                         </>
                 }
-
 
 
             </div>
